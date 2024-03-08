@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Guessing Game</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <h1 class="neon-text">Guessing Game 🧠</h1>
+
+        <!-- Home Button -->
+       
+
+        <div id="instructions">
+            <p>Welcome to the Guessing Game! Try to guess the number between <span id="minNum"></span> and <span id="maxNum"></span>.</p>
+            <p>Select difficulty:</p>
+            <select id="difficulty">
+                <option value="1">Easy</option>
+                <option value="2">Medium</option>
+                <option value="3">Hard</option>
+            </select>
+            <button id="startGame">Start Game</button>
+        </div>
+        <div id="gameSection" style="display: none;">
+            <input type="number" id="userGuess" placeholder="Enter your guess">
+            <button id="submitGuess">Submit Guess</button>
+            <p id="feedback"></p>
+            <p id="validationMessage" class="validation-message"></p>
+            <p>Guess Count: <span id="guessCount">0</span></p>
+            <div id="guessHistory"></div>
+            <button id="resetGame">Reset Game</button>
+            
+        </div>
+        <button id="toggleRules">Show Rules </button>
+        <div id="additionalInstructions" class="rules-box">
+            <h2>Rules to Play the Guessing Game:</h2>
+            <ol>
+                <li>Objective: The objective of the game is to correctly guess the secret number chosen by the game within a specified range.</li>
+                <li>Starting the Game: Choose the difficulty level (Easy, Medium, Hard) and click on the "Start Game" button.</li>
+                <li>Guessing the Number: Enter your guess into the input field provided and click on the "Submit Guess" button.</li>
+                <li>Feedback: After each guess, you'll receive feedback on whether your guess was too high, too low, or correct, along with guess count.</li>
+                <li>Winning the Game: Keep guessing until you correctly guess the secret number.</li>
+                <li>Resetting the Game: You can reset the game at any time by clicking the "Reset Game" button to start a new game.</li>
+            </ol>
+            <h2>Difficulty Levels:</h2>
+            <ul>
+                <li><strong>Easy:</strong> Range: 1-10, Feedback: General, Guess Limit: Unlimited</li>
+                <li><strong>Medium:</strong> Range: 1-50, Feedback: General, Guess Limit: Unlimited</li>
+                <li><strong>Hard:</strong> Range: 1-100, Feedback: Specific, Guess Limit: Unlimited</li>
+            </ul>
+        
+        </div>
+        <button id="homeButton" class="home-button" style="display: none;">Home</button>
+    </div>
+
+    <script src="App.js"></script>
+</body>
+</html>

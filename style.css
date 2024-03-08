@@ -1,0 +1,184 @@
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: #f7f7f7;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    background-image: url('bg.jpg');
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+}
+
+.container {
+    max-width: 600px;
+    margin: 50px auto;
+    padding: 20px;
+    background-color: #fff;
+    border-radius: 10px;
+    box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.1);
+    animation: slideIn 3s ease;
+    position: relative;
+    overflow: hidden;
+    border: 3px solid;
+    border-image: linear-gradient(to right, #ff7676, #f54ea2, #c8a5ff, #6a7bfb, #57c1d4, #49f2d0, #5edc90, #ffd86f, #ff7676) 1;
+}
+
+.home-button {
+    position: fixed;
+    top: 10px;
+    right: 10px;
+    z-index: 999; /* Ensure it appears above other content */
+}
+
+.validation-message {
+    color: red;
+    font-size: 14px;
+    margin-top: 5px;
+}
+
+h1 {
+    color: #333;
+    margin-bottom: 20px;
+}
+
+.difficulty-wrapper {
+    display: flex;
+    align-items: center;
+}
+
+button#startGame {
+    margin-left: 15px; /* Adjust as needed */
+}
+
+input[type="number"],
+button,
+select {
+    margin-top: 20px;
+    margin-bottom: 30px;
+    padding: 10px 20px;
+    font-size: 16px;
+    border: none;
+    border-radius: 5px;
+}
+
+button,
+select {
+    cursor: pointer;
+    background-color: #4caf50;
+    color: #fff;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+button:hover,
+select:hover {
+    background-color: #45a049;
+    transform: scale(1.05);
+}
+
+#feedback {
+    font-weight: bold;
+    margin-top: 20px;
+    color: #333;
+    animation: fadeIn 0.5s ease;
+}
+
+#guessHistory {
+    margin-top: 20px;
+}
+
+#guessHistory p {
+    margin-bottom: 5px;
+}
+
+.rules-box {
+    display: none;
+    margin-top: 20px;
+    padding: 20px;
+    background-color: #fff;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+.rules-box h2 {
+    margin-top: 0;
+}
+
+.rules-box ol,
+.rules-box ul {
+    margin: 0;
+    padding: 0 0 0 20px;
+}
+
+.rules-box ol li,
+.rules-box ul li {
+    margin-bottom: 10px;
+}
+
+.rules-box strong {
+    font-weight: bold;
+}
+
+#instructions,
+#gameSection,
+#additionalInstructions {
+    margin-bottom: 20px;
+}
+
+#toggleRules {
+    position: absolute;
+    bottom: 40px;
+    right: 20px;
+}
+
+.neon-text {
+    color: #efa930;
+    text-shadow: 0 0 5px #d66c6c, 0 0 10px #fff, 0 0 15px #fff, 0 0 20px rgb(130, 126, 226), 0 0 30px rgb(174, 197, 197), 0 0 40px #0ff, 0 0 50px #0ff, 0 0 60px #0ff;
+    animation: neon-glow 1s infinite alternate;
+}
+
+@keyframes neon-glow {
+    from {
+        text-shadow: 0 0 5px #795c5c, 0 0 10px #fff, 0 0 15px #fff, 0 0 20px rgb(115, 219, 132), 0 0 30px #0ff, 0 0 40px #0ff, 0 0 50px #0ff, 0 0 60px #0ff;
+    }
+    to {
+        text-shadow: 0 0 10px #fff, 0 0 20px #fff, 0 0 30px #fff, 0 0 40px #0ff, 0 0 70px #0ff, 0 0 80px #0ff, 0 0 100px #0ff, 0 0 150px #0ff;
+    }
+}
+
+@keyframes slideIn {
+    from {
+        opacity: 0;
+        transform: translateY(-100px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+@media (max-width: 768px) {
+    .container {
+        margin: 20px auto;
+        padding: 10px;
+    }
+    button#startGame {
+        margin-left: 0;
+        margin-top: 10px;
+    }
+    #toggleRules {
+        bottom: 20px;
+        right: 10px;
+    }
+}
